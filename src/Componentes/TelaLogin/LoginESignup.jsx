@@ -4,6 +4,10 @@ import './LoginESignup.css'
 import user_icon from '../assets/person.png'
 import email_icon from '../assets/email.png'
 import senha_icon from '../assets/password.png'
+//import logo_visualRoom from '../assets/VisualRoomLogo.svg'
+//import logo_visualRoom from '../assets/teste1.png'
+//import logo_visualRoom from '../assets/TesteFundoAzul.png'
+import logo_visualRoom from '../assets/TesteLogoBranca.png'
 
 const LoginESignup = () => {
 
@@ -11,7 +15,9 @@ const LoginESignup = () => {
   const [action,setAction] = useState("Criar conta");
 
   return (
-    <div className='container'>
+    <div className='logo1'>
+      <img className='imgLogo' src={logo_visualRoom} alt="" />
+    <div className='container'> 
       <div className="header">
         <div className="text">{action}</div>
         <div className='underline'></div>
@@ -27,7 +33,7 @@ const LoginESignup = () => {
           </div>
           <div className="input">
             <img src={senha_icon} alt="" />
-            <input type="senha" placeholder='Senha' />
+            <input type="password" placeholder='Senha' />
           </div>
         </div>
       </div>
@@ -37,6 +43,7 @@ const LoginESignup = () => {
         <div className={action==="Criar conta"?"submit gray":"submit"} onClick={()=>{setAction("Logar")}}>Logar</div>
       </div>
     </div>
+  </div>
   )
 }
 
